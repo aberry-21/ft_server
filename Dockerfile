@@ -1,5 +1,10 @@
 FROM  debian:buster
 
+#How to run?
+#docker build -t ft_server .
+#docker run -it --rm -p 80:80 -p 443:443 ft_server
+#docker ps -- show all containers
+
 # update pack manager and install utils
 RUN apt-get -y update && apt-get -y upgrade
 RUN apt-get install -y wget nginx mariadb-server openssl php7.3 php-mysql php-fpm php-pdo php-gd php-cli php-mbstring
